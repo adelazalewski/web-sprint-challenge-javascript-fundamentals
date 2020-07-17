@@ -27,13 +27,27 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+-map returns a new array, it needs the return keyword, does not mutate the array; forEach and map both accept a callback function as an argument which means they are both higher order functions; forEach on the other hand doesnt return a new array and return is optional.
+
 2. Explain the difference between a callback and a higher order function.
+
+-callback is the function that's being passed as an argument to the higher order function and the higher order function is the one that accepts the callback function as an argument they go hand in hand.
 
 3. What is closure?
 
+-functions reach out and grab and use variables(WHEN NEEDED) that are not defined inside the function itself but on the global scope/outer scope, BUT 2. A CLOSURE IS LIKE A BACKPACK THAT LOOKS AND TAKES(USES)THE VARIABLE THAT IS "STORED" INSIDE ALREADY, IN THE LOCAL EXECUTING CONTEXT/SCOPE AND ONCE THE FUNCTION IS DONE IT PUTS IT BACK IN THE BACKPACK(keeps it in memory), AND IS NOT BEING DELETED/forgoten ONCE THE FUNCTUION IS DONE
+
 4. Describe the four rules of the 'this' keyword.
 
+1. global/window principal = when this is not specified when the function is called then "this" is binded to the window console. 
+  2. implicite binding = when our object has a method that returns a function (and uses properties from the object) when calling that function were calling it as a property of the object it was defined in and whats to the left of the dot "." for when you call the function thats the object that this is binded to.
+  3. explicit bindeing= is when using the .call .apply and .bind methods they help with binding the this keyword to the object
+  4.new binding = impplies the usage of a constructor function that is names with the first letter capital(i.e. function Person()) and when the function is called you call it using the new keyword and that binds the this with the object that you're using as an argument for that constructor function. 
+
 5. Why do we need super() in an extended class?
+
+-extends and super are crucial when using the class keyword as a constructor function because with the help of them we bind the this keyword to the object that the function creates automaticly and we dont need the help of .call() or .apply() anymore. 
+IN OTHER WORDS: CONSTRUCTOR CALLS ON THE PROPERTIES THAT WE PUT INTO THE PARENT TO THE CHILD OBJECT AND SUPER IS GONNA PUT THOES PROPERTIES BACK UP INTO THE PARENT OBJECT AND WHEN WE "EXTEND", THE "THIS" KEYWORD IS GONNA BE BINDED AND IT'S GOING TO USE THE PARENT'S PROPERTIES
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
